@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-half">
+    <h1 class="govuk-heading-l">Find an applicant</h1>
+    <form action="nino-search" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="search">
+          Applicant&rsquo;s name or National Insurance number
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="search" name="search" type="text">
+      </div>
+      <button type="submit" class="govuk-button">Go</button>
+      <p><a href="#">View all applications</a></p>
+    </form>
+  </div>{# /govuk-grid-column-one-half #}
+
+  <div class="govuk-grid-column-one-half">
+
+    <h1 class="govuk-heading-m">Applicants who are terminally ill</h1>
+    <p>If you see an email for someone on this list, process it as a priority.</p>
+
+    <dl class="govuk-list">
+      <dt><a href="#">Fred Flinstone</a></dt>
+      <dd>applied 10 days ago</dd>
+      <dt><a href="#">Barney Rubble</a></dt>
+      <dd>applied 9 days ago</dd>
+      <dt><a href="#">Daffy Duck</a></dt>
+      <dd>applied 8 days ago</dd>
+      <dt><a href="#">Clark Kent</a></dt>
+      <dd>applied 7 days ago</dd>
+      <dt><a href="#">Louis Lane</a></dt>
+      <dd>applied 6 days ago</dd>
+      <dt><a href="#">Lex Luther</a></dt>
+      <dd>applied today</dd>
+    </dl>
+    
+  </div>{# /govuk-grid-column-one-half #}
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}
