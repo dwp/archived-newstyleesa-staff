@@ -1,0 +1,58 @@
+
+{% extends "layout_staff.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% set bodyClasses = "hero-header" %}
+
+{% block content %}
+
+<div class="full-width govuk-hero">
+  <div class="full-width-inner">
+    <h1 class="govuk-heading-l">Fred Flintstone</h1>
+    <p class="nino govuk-!-font-size-24">QQ 12 34 56 D</p>
+    <p class="highlight govuk-!-font-size-16">Terminally ill</p>
+    <hr>
+    <p><strong>Application form submitted:</strong> 15 January 2019</p>
+  </div>{# /full-width-inner #}
+</div>{# /full-width #}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <div style="margin-top: -20px; margin-bottom: 30px;">
+    {{ govukBackLink({
+      text: "Back",
+      href: "/"
+    }) }}
+    </div>
+    {% include "_answers-personal-details.html" %}
+    {% include "_answers-health-conditions.html" %}
+    {% include "_answers-voluntary-work.html" %}
+    {% include "_answers-paid-work.html" %}
+    {% include "_answers-statutory-pay.html" %}
+    {% include "_answers-pensions-health-insurance.html" %}
+    {% include "_answers-consent-to-request.html" %}
+    
+    
+    
+    
+  </div>{# /govuk-grid-column-two-thirds #}
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h3 class="govuk-heading-m" id="claim-actions-title">New claim</h3>
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li><a href="#">Mark as appointment confirmed</a></li>
+        </ul>
+        <p><a href="#" class="govuk-button">Mark as processed</a></p>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </aside>
+  </div>
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}

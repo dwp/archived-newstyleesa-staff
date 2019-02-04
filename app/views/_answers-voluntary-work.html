@@ -1,0 +1,33 @@
+<h2 class="govuk-heading-m">Voluntary work</h2>
+
+{{ govukSummaryList({
+  classes: 'govuk-!-margin-bottom-9',
+  rows: [
+    {
+      key: {text: "Doing voluntary work"},
+      value: {text: "Yes"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Voluntary work details"},
+      value: {html: "
+        Oxfam<br>
+        72 Guild street<br>
+        London<br>
+        SF23 6FH<br>
+        020 7946 0809
+        "},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Type of voluntary work"},
+      value: {text: "Spend some time helping on the tills and washing clothes before they go on sale."},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Hours you volunteer each week"},
+      value: {text: "1"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    }
+  ]
+})}}

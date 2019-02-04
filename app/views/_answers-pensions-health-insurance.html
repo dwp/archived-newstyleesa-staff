@@ -1,0 +1,61 @@
+<h2 class="govuk-heading-m">Pensions and permanent health insurance</h2>
+
+{{ govukSummaryList({
+  classes: 'govuk-!-margin-bottom-9',
+  rows: [
+    {
+      key: {text: "Getting money from a pension or annuity"},
+      value: {text: "Yes"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Pension or annuity details"},
+      value: {html: "
+        Prudential<br>
+        Reference number 245-485-198<br>
+        020 7946 0076<br>
+        72 Guild street<br>
+        London<br>
+        SE23 6FH
+      "},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Payments from pension or annuity"},
+      value: {html: "&pound;75 a week"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Inherited pension or annuity"},
+      value: {text: "No"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Getting money from permanent health insurance"},
+      value: {text: "Yes"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Permanent health insurance details"},
+      value: {html: "
+        Prudential<br>
+        Reference number 245-485-198<br>
+        020 7946 0076<br>
+        72 Guild street<br>
+        London<br>
+        SE23 6FH
+      "},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Premiums paid in"},
+      value: {text: "I pay less than half the premiums myself"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Payments received from health insurance"},
+      value: {html: "&pound;65 a week"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    }
+  ]
+})}}

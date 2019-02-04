@@ -14,20 +14,137 @@ $govuk-global-styles: true;
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-
 .dwp-header {
-  color: white;
+  background-color: govuk-colour("black");
   margin: 0;
-  padding: 0;
-
   a {
-    // color: white;
-    font-weight: bold;
+    color: govuk-colour("white");
     text-decoration: none;
-    font-size: 28px;
-    padding: 0 0 0 20px;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+    @extend %govuk-heading-m;
+    padding: govuk-spacing(2) 0;
+    margin-bottom: 0;
+    @include govuk-media-query($from: tablet) {
+      padding: govuk-spacing(3) 0;
+    }
+  }
+}
 
-    span { font-weight: normal; font-size: 22px; margin-left: 10px; }
+.dwp-key-details-bar {
+  background-color: govuk-colour("blue");
+  width: 100%;
+}
+
+.applicant-list {
+  list-style: none;
+  padding: 0;
+  li {
+    
+    // margin: 0;
+    // padding: 0;
+  }
+  h3 {
+    font-weight: normal;
+    display: inline;
+    @include govuk-media-query($from: tablet) {
+      // background-color: green;
+      display: block;
+      float: left;
+      clear: both;
+      width: 60%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  p {
+    display: inline;
+    color: govuk-colour("grey-1");
+    margin-bottom: govuk-spacing(1);
+    @include govuk-media-query($from: mobile) {
+      // background-color: red;
+      display: block;
+      float: right;
+      width: 35%;
+      text-align: right;
+      // padding: 0;
+      // 
+    } 
+  }
+}
+
+/* =============================================================================
+    BIG BLUE HEADERS
+ =============================================================================== */
+
+.hero-header {
+  overflow-x: hidden;
+  // background-color: red !important;
+}
+
+.hero-header {
+
+  .govuk-main-wrapper {
+    padding: 0;
+  }
+  .govuk-hero {
+    color: govuk-colour("white");
+    background-color: govuk-colour("blue");
+    margin-bottom: 40px;
+    padding: govuk-spacing(2) 0;
+    @include govuk-media-query($from: tablet) {
+      padding: govuk-spacing(4) 0;
+    }
+    .govuk-heading-l, p {
+      color: govuk-colour("white");
+    }
+    .govuk-heading-l {
+      display: inline;
+      padding-right: 10px;
+    }
+    .nino {
+      display: inline;
+      padding-right: 10px;
+    }
+    .highlight {
+      display: inline;
+      background-color: #fde593;
+      color: govuk-colour("black");
+      padding: 5px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    margin: govuk-spacing(2) 0;
+    border: none;
+    border-top: 1px solid govuk-colour("white");
+    opacity: 0.5;
+    padding-bottom: govuk-spacing(1);
+    margin-top: govuk-spacing(2);
+  }
+
+  .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+  }
+
+  .full-width-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include govuk-media-query($from: tablet) {
+      padding: 0 30px;
+    }
   }
 
 }
+
+

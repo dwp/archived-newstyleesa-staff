@@ -1,0 +1,47 @@
+<h2 class="govuk-heading-m">Personal details</h2>
+
+{{ govukSummaryList({
+  classes: 'govuk-!-margin-bottom-9',
+  rows: [
+    {
+      key: {text: "First name"},
+      value: {text: "Fred"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Last name"},
+      value: {text: "Flintstone"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Date of birth"},
+      value: {text: " 5 January 1978"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "National Insurance number"},
+      value: {text: "QQ 12 34 56 C"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Home address"},
+      value: {html: "72 Guild Street<br>London<br>SE23 6FH"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Alternative correspondence address"},
+      value: {html: "34 Guild Street<br>London<br>SE23 6FH"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Mobile number"},
+      value: {text: "07700 900457"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    },
+    {
+      key: {text: "Claim start date"},
+      value: {text: "18 January 2019"},
+      actions: {items: [{ href: "#", text: "Copy", visuallyHiddenText: "name"}]}
+    }
+  ]
+})}}
