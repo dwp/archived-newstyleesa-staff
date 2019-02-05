@@ -8,3 +8,22 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
+
+
+// Sortable tables
+
+$(document).ready(function() {
+
+  // DataTable
+  var table = $('.listing-table').DataTable({
+    // "scrollY": 400,
+    "paging":   false,
+    "scrollX": true,
+    "fixedHeader": true,
+    "lengthChange": false,
+    "info":         false
+  });
+
+  $("#searchable-table_filter").find('input').attr("placeholder", "Type to filter");
+
+});

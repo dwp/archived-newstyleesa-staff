@@ -14,6 +14,11 @@ $govuk-global-styles: true;
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+.clear {
+  clear: both;
+}
+
+
 .dwp-header {
   background-color: govuk-colour("black");
   margin: 0;
@@ -84,6 +89,17 @@ $govuk-global-styles: true;
   // background-color: red !important;
 }
 
+.highlight {
+  display: inline;
+  background-color: #fde593;
+  color: govuk-colour("black");
+  padding: 5px;
+}
+
+a .highlight {
+  text-decoration: none;
+}
+
 .hero-header {
 
   .govuk-main-wrapper {
@@ -108,12 +124,7 @@ $govuk-global-styles: true;
       display: inline;
       padding-right: 10px;
     }
-    .highlight {
-      display: inline;
-      background-color: #fde593;
-      color: govuk-colour("black");
-      padding: 5px;
-    }
+    
     p {
       margin-bottom: 0;
     }
@@ -146,5 +157,173 @@ $govuk-global-styles: true;
   }
 
 }
+
+/////////////////////////////////
+// Tables
+/////////////////////////////////
+
+ thead th {
+  padding: 0;
+ }
+
+ table {
+  margin-bottom: 0 !important;
+ }
+
+table {
+  th, td {
+    // @include copy-16;
+    padding: 7px;
+    vertical-align: top;
+
+  }
+  td {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  th {
+    font-weight: bold;
+  }
+  tbody tr {
+  }
+  a {
+    display: block;
+  }
+}
+
+// Sortable table styles
+
+th.right,
+td.right {
+  text-align: right;
+  padding-right: 2%;
+}
+
+th.right.padding-right {
+  padding-right: 25px;
+}
+
+tr.table-header-sortable th {
+  cursor: pointer;
+  padding-right: 0;
+  &:hover {
+    text-decoration: underline;
+    // color: $link-hover-colour;
+  }
+  span {
+    padding-right: 14px;
+    background-repeat: no-repeat;
+    background-position: right 6px;
+  }
+}
+
+.sorting_asc span {
+  background-image: url(/public/images/icons/arrow-small-up-blue.svg);
+}
+
+.sorting_desc span {
+  background-image: url(/public/images/icons/arrow-small-down-blue.svg);
+  background-position: right 7px;
+}
+
+// Fixed header table styles
+
+.fixedHeader-floating {
+  position: fixed;
+  background-color: govuk-colour("white");
+} 
+
+.fixedHeader-floating th {
+  border-bottom: 2px solid govuk-colour("grey-2");
+}
+
+// Horizontal scrollable tables
+
+.table-scrollable-wrapper {
+  // overflow: auto;
+  position: relative;
+  clear: both;
+  .table-scrollable {
+    min-width: 550px;
+    overflow: auto;
+  }
+
+}
+
+// /////////////////////////////////
+// // FILTERS
+// /////////////////////////////////
+
+.filters {
+  clear: both;
+  margin-bottom: 20px;
+  width: 60%;
+  @extend %govuk-body-s;
+  float: left;
+  h3 {
+    display: inline-block;
+    margin-right: 5px;
+    @extend %govuk-body-s;
+  }
+  font-size: 16px;
+  line-height: 20px;
+  
+  ul {
+    display: inline-block;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  select {
+    font-size: 14px;
+    list-style: 20px;
+    background-color: white;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+}
+
+.dataTables_filter {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  float: right;
+  top: -55px;
+  z-index: 9999;
+  label {
+    position: relative;
+    display: block;
+    input {
+      position: absolute;
+      right: 0;
+      font-size: 16px;
+      padding: 5px;
+      width: 300px;
+      @extend %govuk-input;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: govuk-colour("grey-1");
+}
+
+
+// Data tables filter 
+
+// .dataTables_filter {
+//   background-color: green;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+// }
+
+
 
 

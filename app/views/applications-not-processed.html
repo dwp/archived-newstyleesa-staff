@@ -1,0 +1,150 @@
+
+{% extends "layout_staff.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div>
+  {{ govukBackLink({
+  text: "Back",
+  href: "/"
+  }) }}
+</div>
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">Applications</h1>
+
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#">
+          <strong>Not processed (54)</strong>
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="applications-processed">
+          Processed (26)
+        </a>
+      </li>
+    </ul>
+
+    <div class="filters">
+      <h3>Showing</h3>
+      <ul>
+        <li class="bold">All</li>
+        <li><a href="#">Terminally ill</a></li>
+        <li><a href="#">Appointment confirmed</a></li>
+      </ul>
+    </div>{# /filters #}
+
+    <div class="table-scrollable-wrapper">
+
+      <table cellspacing="0" width="100%" class="govuk-table listing-table">
+        <thead>
+          <tr>
+            <th class="govuk-table__header" style="width: 20%"><span>Date submitted</span></th>
+            <th class="govuk-table__header" style="width: 30%"><span>Applicant</span></th>
+            <th class="govuk-table__header"><span>National Insurance number</span></th>
+            <th class="govuk-table__header"><span>Appointment booking</span></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee <span class="highlight">Special rules</span></a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee <span class="highlight">Special rules</span></a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 July</td>
+            <td class="govuk-table__cell"><a href="to-do">Oliver McFee</a></td>
+            <td class="govuk-table__cell">QQ654321Q</td>
+            <td class="govuk-table__cell">Confirmed</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>{# /table-scrollable-wrapper #}
+    
+  </div>{# /govuk-grid-column-full #}
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}
