@@ -5,6 +5,10 @@
   Find an applicant - Apply for new style Employment and Support Allowance
 {% endblock %}
 
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-6"></div>
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -18,7 +22,7 @@
         </label>
         <input class="govuk-input govuk-input--width-20" id="search" name="search" type="text">
       </div>
-      <a href="applicant" class="govuk-button">Go</a>
+      <a href="applicant" class="govuk-button">Find applicant</a>
       <p><a href="applications-not-processed">View all applications</a></p>
     </form>
   </div>{# /govuk-grid-column-one-half #}
@@ -46,7 +50,7 @@
         <p>applied 7 days ago</p>
       </li>
       <li>
-        <h3><a href="applicant">Louis Lane</a></h3>
+        <h3><a href="applicant">Lois Lane</a></h3>
         <p>applied 6 days ago</p>
       </li>
       <li>

@@ -14,6 +14,11 @@ $govuk-global-styles: true;
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+* {
+  font-family: "nta", Arial, sans-serif;
+}
+
+
 .clear {
   clear: both;
 }
@@ -30,13 +35,15 @@ $govuk-global-styles: true;
       text-decoration: underline;
     }
     @extend %govuk-heading-m;
-    padding: govuk-spacing(2) 0;
+    padding: 13px 0 12px 0;
     margin-bottom: 0;
     @include govuk-media-query($from: tablet) {
-      padding: govuk-spacing(3) 0;
+      padding: 13px 0 10px 0;
     }
   }
 }
+
+
 
 .dwp-key-details-bar {
   background-color: govuk-colour("blue");
@@ -55,11 +62,10 @@ $govuk-global-styles: true;
     font-weight: normal;
     display: inline;
     @include govuk-media-query($from: tablet) {
-      // background-color: green;
       display: block;
       float: left;
       clear: both;
-      width: 60%;
+      width: 30%;
       padding: 0;
       margin: 0;
     }
@@ -71,9 +77,9 @@ $govuk-global-styles: true;
     @include govuk-media-query($from: mobile) {
       // background-color: red;
       display: block;
-      float: right;
+      float: left;
       width: 35%;
-      text-align: right;
+      text-align: left;
       // padding: 0;
       // 
     } 
@@ -87,6 +93,9 @@ $govuk-global-styles: true;
 .hero-header {
   overflow-x: hidden;
   // background-color: red !important;
+  .dwp-header {
+    margin-bottom: 0;
+  }
 }
 
 .highlight {
@@ -123,6 +132,9 @@ a .highlight {
     .nino {
       display: inline;
       padding-right: 10px;
+    }
+    .highlight {
+      color: govuk-colour("black");
     }
     
     p {
@@ -188,6 +200,15 @@ table {
   }
   a {
     display: block;
+    text-decoration: none;
+    // font-weight: bold;
+  }
+  .table-link {
+    text-decoration: underline;
+  }
+  .highlight {
+    margin-left: 10px;
+    @extend %govuk-body-s;
   }
 }
 
@@ -258,16 +279,17 @@ tr.table-header-sortable th {
   clear: both;
   margin-bottom: 20px;
   width: 60%;
-  @extend %govuk-body-s;
   float: left;
+  font-size: 19px;
+  line-height: 25px;
+  padding-top: 20px;
   h3 {
     display: inline-block;
     margin-right: 5px;
-    @extend %govuk-body-s;
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: normal;
   }
-  font-size: 16px;
-  line-height: 20px;
-  
   ul {
     display: inline-block;
     padding: 0;
@@ -276,17 +298,11 @@ tr.table-header-sortable th {
     display: inline-block;
     margin-right: 10px;
   }
-
-  select {
-    font-size: 14px;
-    list-style: 20px;
-    background-color: white;
-  }
-
-  .bold {
-    font-weight: bold;
-  }
-
+  // select {
+  //   font-size: 14px;
+  //   list-style: 20px;
+  //   background-color: white;
+  // }
 }
 
 .dataTables_filter {
@@ -294,7 +310,7 @@ tr.table-header-sortable th {
   right: 0;
   width: 200px;
   float: right;
-  top: -55px;
+  top: -72px;
   z-index: 9999;
   label {
     position: relative;
@@ -305,7 +321,10 @@ tr.table-header-sortable th {
       font-size: 16px;
       padding: 5px;
       width: 300px;
-      @extend %govuk-input;
+      border: 2px solid govuk-colour("black");
+      padding: 6px 5px 4px 5px;
+      font-size: 19px;
+      line-height: 25px;
     }
   }
 }
@@ -314,16 +333,8 @@ tr.table-header-sortable th {
   color: govuk-colour("grey-1");
 }
 
-
-// Data tables filter 
-
-// .dataTables_filter {
-//   background-color: green;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-// }
-
-
-
-
+.govuk-button.secondary {
+  background-color: govuk-colour("grey-3");
+  color: govuk-colour("black");
+  box-shadow: 0 2px 0 #666;
+}

@@ -21,9 +21,10 @@ $(document).ready(function() {
     "scrollX": true,
     "fixedHeader": true,
     "lengthChange": false,
-    "info":         false
+    "info":         false,
+    "ordering": false,
   });
 
-  $("#searchable-table_filter").find('input').attr("placeholder", "Type to filter");
+  $(".dataTables_filter").find('input').attr("placeholder", "Type to filter");
 
 });
