@@ -338,3 +338,38 @@ tr.table-header-sortable th {
   color: govuk-colour("black");
   box-shadow: 0 2px 0 #666;
 }
+
+// Statuses
+
+.status-new {
+  border-color: govuk-colour("grey-1");
+  h3 {
+    color: govuk-colour("grey-1");
+    text-transform: uppercase;
+  }
+}
+
+.status-verified {
+  border-color: govuk-colour("bright-purple");
+  h3 {
+    color: govuk-colour("bright-purple");
+    text-transform: uppercase;
+  }
+}
+
+.status-processed {
+  border-color: govuk-colour("green");
+  h3 {
+    color: govuk-colour("green");
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+
+
+
+
+
