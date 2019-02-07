@@ -339,6 +339,17 @@ tr.table-header-sortable th {
   box-shadow: 0 2px 0 #666;
 }
 
+// Sticky sidebar
+
+.sticky-sidebar__inner{
+  box-sizing: border-box;
+  position: relative;
+  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: position, transform;
+}
+
+
 // Statuses
 
 .status-new {

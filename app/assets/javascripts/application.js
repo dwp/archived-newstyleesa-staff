@@ -9,9 +9,7 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
 
-
 // Sortable tables
-
 $(document).ready(function() {
 
   // DataTable
@@ -26,5 +24,19 @@ $(document).ready(function() {
   });
 
   $(".dataTables_filter").find('input').attr("placeholder", "Type to filter");
+
+});
+
+// Stick side bar
+
+$(document).ready(function() {
+
+  // DataTable
+  var a = new StickySidebar('#sticky-sidebar', {
+    topSpacing: 20,
+    bottomSpacing: 20,
+    containerSelector: '.container',
+    innerWrapperSelector: '.sticky-sidebar__inner'
+  });
 
 });
