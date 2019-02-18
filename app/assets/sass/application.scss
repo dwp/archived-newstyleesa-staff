@@ -23,6 +23,10 @@ $govuk-global-styles: true;
   clear: both;
 }
 
+a:visited {
+  color: $govuk-link-colour;
+}
+
 
 .dwp-header {
   background-color: govuk-colour("black");
