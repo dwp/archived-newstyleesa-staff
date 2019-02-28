@@ -22,22 +22,22 @@
 <div style="margin-top: -40px; margin-bottom: 30px;">
   {{ govukBackLink({
     text: "Back",
-    href: "/"
+    href: "search"
   }) }}
 </div>
 
 <div class="govuk-grid-row container">
 
   <div class="govuk-grid-column-two-thirds">
-    {% include "_answers-dates.html" %}
-    {% include "_answers-personal-details.html" %}
-    {% include "_answers-paid-work.html" %}
-    {% include "_answers-voluntary-work.html" %}
-    {% include "_answers-pensions-health-insurance.html" %}
-    {% include "_answers-statutory-pay.html" %}
-    {% include "_answers-health-conditions.html" %}
-    {% include "_answers-consent-to-request.html" %}
-    {% include "_answers-payment-method.html" %}
+    {% include "design/_answers-dates.html" %}
+    {% include "design/_answers-personal-details.html" %}
+    {% include "design/_answers-paid-work.html" %}
+    {% include "design/_answers-voluntary-work.html" %}
+    {% include "design/_answers-pensions-health-insurance.html" %}
+    {% include "design/_answers-statutory-pay.html" %}
+    {% include "design/_answers-health-conditions.html" %}
+    {% include "design/_answers-consent-to-request.html" %}
+    {% include "design/_answers-payment-method.html" %}
   </div>{# /govuk-grid-column-two-thirds #}
 
   <div class="govuk-grid-column-one-third">
@@ -106,7 +106,7 @@
           <aside class="app-related-items status-new" role="complementary">
             <h3 class="govuk-heading-m" id="claim-actions-title">New application</h3>
             <p>
-              <a href="applicant?appointment=true" class="govuk-button secondary govuk-!-margin-bottom-3">Appointment confirmed</a>
+
               <a href="applicant?verified=true" class="govuk-button">Mark as verified</a>
             </p>
             <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">

@@ -1,0 +1,68 @@
+
+{% extends "layout_staff.html" %}
+
+{% block pageTitle %}
+  Find an applicant - Apply for new style Employment and Support Allowance
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-6"></div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-half">
+
+    <h1 class="govuk-heading-l">Email the processing team</h1>
+
+    <p>Let the processing team know that the applicant has:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>confirmed their identity</li>
+      <li>signed a claimant commitment</li>
+    </ul>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="insurance-provider-name">
+        Applicant&rsquo;s National Insurance number 
+      </label>
+      <input class="govuk-input" id="insurance-provider-name" name="insurance-provider-1" type="text">
+    </div>
+
+{#     <div class="govuk-form-group">
+      <label class="govuk-label" for="insurance-provider-name">
+        Your email address
+      </label>
+      <input class="govuk-input" id="insurance-provider-name" name="insurance-provider-1" type="text">
+    </div> #}
+
+{#     <div class="govuk-form-group">
+      <label class="govuk-label" for="more-detail">
+        Notes (optional)
+      </label>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div> #}
+
+{#     <div class="govuk-form-group">
+      <label class="govuk-label" for="insurance-provider-name">
+        Notes
+      </label>
+      <input class="govuk-input" id="insurance-provider-name" name="insurance-provider-1" type="textarea">
+    </div> #}
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        Upload supporting documents
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" multiple>
+    </div>
+
+    <input type="submit" class="govuk-button" value="Send email" id="formbutton">
+    
+  </div>{# /govuk-grid-column-one-half #}
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}
