@@ -1,0 +1,48 @@
+
+{% extends "layout_staff.html" %}
+
+{% block pageTitle %}
+  Find an applicant - Apply for new style Employment and Support Allowance
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-6"></div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-half">
+
+    <h2 class="govuk-heading-l">Tell the processing centre about an appointment</h2>
+{#     <p>If you see an email for someone on this list, please treat their appointment as a priority and see if they’d like a home visit.</p> #}
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="event-name">
+        Applicant&rsquo;s National Insurance number
+      </label>
+      <input class="govuk-input" id="event-name" name="event-name" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        Upload a file
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" multiple>
+    </div>
+
+    <button type="submit" class="govuk-button">
+      Submit
+    </button>
+
+    
+  </div>{# /govuk-grid-column-one-half #}
+
+  <div class="govuk-grid-column-one-half">
+
+  </div>{# /govuk-grid-column-one-half #}
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}
