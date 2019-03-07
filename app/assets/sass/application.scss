@@ -38,7 +38,8 @@ a:visited {
     &:focus {
       text-decoration: underline;
     }
-    &:active {
+    &:active,
+    &:focus {
       color: govuk-colour("black");
     }
     @extend %govuk-heading-m;
