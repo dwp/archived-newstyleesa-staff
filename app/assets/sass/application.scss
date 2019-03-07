@@ -384,6 +384,14 @@ tr.table-header-sortable th {
   }
 }
 
+.status-failedtoattend {
+  border-color: govuk-colour("bright-red");
+  h3 {
+    color: govuk-colour("bright-red");
+    text-transform: uppercase;
+  }
+}
+
 
 
 // Tags

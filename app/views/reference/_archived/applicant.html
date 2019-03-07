@@ -12,7 +12,7 @@
 <div class="full-width govuk-hero">
   <div class="full-width-inner">
     <h1 class="govuk-heading-l">Fred Flintstone</h1>
-    <p class="nino govuk-!-font-size-24">QQ 12 34 56 C</p>
+    <p class="nino govuk-!-font-size-24">QQ 12 34 56 D</p>
     <strong class="app-c-tag app-c-tag--special-rules">Special rules</strong>
 {#     <hr>
     <p><strong>Application form submitted:</strong> 15 January 2019</p> #}
@@ -29,55 +29,15 @@
 <div class="govuk-grid-row container">
 
   <div class="govuk-grid-column-two-thirds">
-
-
-{{ govukSummaryList({
-  classes: 'govuk-!-margin-bottom-9',
-  rows: [
-    {
-      key: {text: "Application submitted"},
-      value: {text: "15/10/19"},
-      actions: {items: [{ href: "", text: "", visuallyHiddenText: ""}]}
-    },
-    {
-      key: {text: "Claim start date"},
-      value: {text: "15/10/19"},
-      actions: {items: [{ href: "", text: "", visuallyHiddenText: ""}]}
-    },
-    {
-      key: {text: "First name"},
-      value: {text: "Fred"},
-      actions: {items: [{ href: "", text: "", visuallyHiddenText: ""}]}
-    },
-    {
-      key: {text: "Last name"},
-      value: {text: "Flintstone"},
-      actions: {items: [{ href: "", text: "", visuallyHiddenText: ""}]}
-    },
-    {
-      key: {text: "National Insurance number"},
-      value: {text: "QQ 12 34 56 C"},
-      actions: {items: [{ href: "", text: "", visuallyHiddenText: ""}]}
-    },
-    {
-      key: {text: "Date of birth"},
-      value: {text: "05/01/1978"},
-      actions: {items: [{ href: "", text: "", visuallyHiddenText: "name"}]}
-    },
-    {
-      key: {text: "Postcode"},
-      value: {text: "NG1 5TY"},
-      actions: {items: [{ href: "", text: "", visuallyHiddenText: "name"}]}
-    },
-    {
-      key: {text: "Jobcentre"},
-      value: {text: "[JOBCENTRE CODE]"},
-      actions: {items: [{ href: "", text: "", visuallyHiddenText: ""}]}
-    }
-  ]
-})}}
-
-
+    {% include "reference/_answers-dates.html" %}
+    {% include "reference/_answers-personal-details.html" %}
+    {% include "reference/_answers-paid-work.html" %}
+    {% include "reference/_answers-voluntary-work.html" %}
+    {% include "reference/_answers-pensions-health-insurance.html" %}
+    {% include "reference/_answers-statutory-pay.html" %}
+    {% include "reference/_answers-health-conditions.html" %}
+    {% include "reference/_answers-consent-to-request.html" %}
+    {% include "reference/_answers-payment-method.html" %}
   </div>{# /govuk-grid-column-two-thirds #}
 
   <div class="govuk-grid-column-one-third">
@@ -126,32 +86,12 @@
               </div>
             </details>
           </aside>
-        {% elif getData.failedtoattend %}
-          {# Processed #}
-          <aside class="app-related-items status-failedtoattend" role="complementary">
-            <h3 class="govuk-heading-m" id="claim-actions-title">Failed to attend</h3>
-            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-            <br>
-            <p><a href="#" style="margin-top: -30px; margin-bottom: 30px; display: block">Download PDF</a></p>
-
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  More actions
-                </span>
-              </summary>
-              <div class="">
-                <a href="applicant?verified=true" class="govuk-button secondary govuk-!-margin-top-2 govuk-!-margin-bottom-3">Mark verified</a>
-              </div>
-            </details>
-          </aside>
         {% else %}
           {# New application #}
           <aside class="app-related-items status-new" role="complementary">
-            <h3 class="govuk-heading-m" id="claim-actions-title">Unverified</h3>
+            <h3 class="govuk-heading-m" id="claim-actions-title">New application</h3>
             <p>
               <a href="applicant?verified=true" class="govuk-button">Mark as verified</a>
-              <a href="applicant?failedtoattend=true" class="govuk-button secondary" style="margin-top: -15px;">Mark as failed to attend</a>
               <br>
               <a href="#" style="margin-top: -10px; margin-bottom: 60px; display: block">Download PDF</a>
             </p>

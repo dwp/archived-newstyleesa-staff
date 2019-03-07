@@ -14,18 +14,15 @@
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-one-half">
-    <h1 class="govuk-heading-l">Find a claim</h1>
+    <h1 class="govuk-heading-l">Find an applicant</h1>
     <form action="nino-search" method="post">
       <div class="govuk-form-group">
         <label class="govuk-label" for="search">
-          Enter the claimant’s National Insurance number
+          Applicant&rsquo;s {# name or  #}National Insurance number
         </label>
-        <span id="nino-hint" class="govuk-hint">
-          For example, ‘QQ123456C’.
-        </span>
         <input class="govuk-input govuk-input--width-20" id="search" name="search" type="text">
       </div>
-      <a href="applicant" class="govuk-button">Find claim</a>
+      <a href="applicant" class="govuk-button">Find applicant</a>
 {#       <p><a href="applications-not-processed">View all applications</a></p> #}
     </form>
   </div>{# /govuk-grid-column-one-half #}
