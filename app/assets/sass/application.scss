@@ -38,6 +38,9 @@ a:visited {
     &:focus {
       text-decoration: underline;
     }
+    &:active {
+      color: govuk-colour("black");
+    }
     @extend %govuk-heading-m;
     padding: 13px 0 12px 0;
     margin-bottom: 0;
@@ -382,7 +385,40 @@ tr.table-header-sortable th {
 
 
 
+// Tags
 
+.app-c-tag {
+  background-color: govuk-colour("light-blue");
+  color: govuk-colour("white");
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  top: -3px;
+}
+
+.app-c-tag--success {
+  background-color: govuk-colour("light-green");
+}
+
+.app-c-tag--warning {
+  background-color: govuk-colour("brown");
+}
+
+.app-c-tag--danger {
+  background-color: govuk-colour("bright-red");
+}
+
+.app-c-tag--special-rules {
+  background-color: #fde593;
+  color: govuk-colour("black"); 
+}
 
 
 

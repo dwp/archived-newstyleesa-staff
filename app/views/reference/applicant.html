@@ -13,7 +13,7 @@
   <div class="full-width-inner">
     <h1 class="govuk-heading-l">Fred Flintstone</h1>
     <p class="nino govuk-!-font-size-24">QQ 12 34 56 D</p>
-    <p class="highlight govuk-!-font-size-16">Special rules</p>
+    <strong class="app-c-tag app-c-tag--special-rules">Special rules</strong>
 {#     <hr>
     <p><strong>Application form submitted:</strong> 15 January 2019</p> #}
   </div>{# /full-width-inner #}
@@ -45,33 +45,16 @@
     <div id="sticky-sidebar">
       <div class="sticky-sidebar__inner">
 
-        {% if getData.appointment %}
-          {# New application that has an appointment #}
-          <aside class="app-related-items status-new" role="complementary">
-            <h3 class="govuk-heading-m" id="claim-actions-title">New application</h3>
-            <p>Appointment has been confirmed</p>
-            <p>
-              <a href="applicant?verified=true" class="govuk-button">Mark as verified</a>
-            </p>
-            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-            <details class="govuk-details" style="margin-top: -40px">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  More actions
-                </span>
-              </summary>
-              <div class="">
-                <a href="applicant" class="govuk-button secondary govuk-!-margin-top-2 govuk-!-margin-bottom-3">Appointment not confirmed</a>
-              </div>
-            </details>
-          </aside>
-        {% elif getData.verified %}
+        {% if getData.verified %}
           {# Verified #}
           <aside class="app-related-items status-verified" role="complementary">
             <h3 class="govuk-heading-m" id="claim-actions-title">Verified</h3>
             <p>
               <a href="applicant?processed=true" class="govuk-button">Mark as processed</a>
+              <br>
+              <a href="#" style="margin-top: -10px; margin-bottom: 50px; display: block">Download PDF</a>
             </p>
+
             <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
             <details class="govuk-details" style="margin-top: -40px">
               <summary class="govuk-details__summary">
@@ -90,10 +73,12 @@
             <h3 class="govuk-heading-m" id="claim-actions-title">Processed</h3>
             <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
             <br>
-            <details class="govuk-details" style="margin-top: -40px">
+            <p><a href="#" style="margin-top: -30px; margin-bottom: 30px; display: block">Download PDF</a></p>
+
+            <details class="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
-                  Actions
+                  More actions
                 </span>
               </summary>
               <div class="">
@@ -106,8 +91,9 @@
           <aside class="app-related-items status-new" role="complementary">
             <h3 class="govuk-heading-m" id="claim-actions-title">New application</h3>
             <p>
-
               <a href="applicant?verified=true" class="govuk-button">Mark as verified</a>
+              <br>
+              <a href="#" style="margin-top: -10px; margin-bottom: 60px; display: block">Download PDF</a>
             </p>
             <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
           </aside>
