@@ -18,7 +18,6 @@ $govuk-global-styles: true;
   font-family: "nta", Arial, sans-serif;
 }
 
-
 .clear {
   clear: both;
 }
@@ -26,7 +25,6 @@ $govuk-global-styles: true;
 a:visited {
   color: $govuk-link-colour;
 }
-
 
 .dwp-header {
   background-color: govuk-colour("black");
@@ -51,8 +49,6 @@ a:visited {
   }
 }
 
-
-
 .dwp-key-details-bar {
   background-color: govuk-colour("blue");
   width: 100%;
@@ -62,9 +58,6 @@ a:visited {
   list-style: none;
   padding: 0;
   li {
-    
-    // margin: 0;
-    // padding: 0;
   }
   h3 {
     font-weight: normal;
@@ -83,13 +76,10 @@ a:visited {
     color: govuk-colour("grey-1");
     margin-bottom: govuk-spacing(1);
     @include govuk-media-query($from: mobile) {
-      // background-color: red;
       display: block;
       float: left;
       width: 35%;
       text-align: left;
-      // padding: 0;
-      // 
     } 
   }
 }
@@ -175,7 +165,6 @@ a .highlight {
       padding: 0 30px;
     }
   }
-
 }
 
 /////////////////////////////////
@@ -209,7 +198,6 @@ table {
   a {
     display: block;
     text-decoration: none;
-    // font-weight: bold;
   }
   .table-link {
     text-decoration: underline;
@@ -237,7 +225,6 @@ tr.table-header-sortable th {
   padding-right: 0;
   &:hover {
     text-decoration: underline;
-    // color: $link-hover-colour;
   }
   span {
     padding-right: 14px;
@@ -306,11 +293,6 @@ tr.table-header-sortable th {
     display: inline-block;
     margin-right: 10px;
   }
-  // select {
-  //   font-size: 14px;
-  //   list-style: 20px;
-  //   background-color: white;
-  // }
 }
 
 .dataTables_filter {
@@ -357,7 +339,6 @@ tr.table-header-sortable th {
   will-change: position, transform;
 }
 
-
 // Statuses
 
 .status-new {
@@ -392,8 +373,6 @@ tr.table-header-sortable th {
   }
 }
 
-
-
 // Tags
 
 .app-c-tag {
@@ -405,11 +384,12 @@ tr.table-header-sortable th {
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.25;
-  padding: 5px 8px 0;
+  padding: 5px 5px 2px 5px;
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
-  top: -3px;
+  top: -4px;
+  margin-top: 5px;
 }
 
 .app-c-tag--success {
@@ -429,7 +409,10 @@ tr.table-header-sortable th {
   color: govuk-colour("black"); 
 }
 
+// Summary view
 
-
-
-
+.summary-view dt {
+  @include govuk-media-query($from: tablet) {
+    width: 50%;
+  }
+}
